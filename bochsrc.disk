@@ -1,0 +1,27 @@
+# step one
+megs: 32
+
+# step two
+romimage: file=/opt/homebrew/Cellar/bochs/2.7/share/bochs/BIOS-bochs-latest
+vgaromimage: file=/opt/homebrew/Cellar/bochs/2.7/share/bochs/VGABIOS-lgpl-latest
+
+# step three
+#floppya: 1_44=a.img, status=inserted
+
+# step four
+boot: disk
+
+# step five
+log: bochs.out
+
+# step six
+mouse: enabled=0
+keyboard: keymap=/opt/homebrew/Cellar/bochs/2.7/share/bochs/keymaps/x11-pc-us.map
+
+# step seven
+ata0: enabled=1, ioaddr1=0x1f0, ioaddr2=0x3f0, irq=14
+ata0-master: type=disk, path="/Users/yun/huayun321/yun-os/hd60M.img", mode=flat
+
+# step eight
+# gdbstub: enabled=0, port=1234, text_base=0, data_base=0, bss_base=0
+
